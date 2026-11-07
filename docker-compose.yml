@@ -1,5 +1,5 @@
 # Development stack. `make dev` starts db + mailpit.
-name: blizu
+name: datathon-2026
 
 services:
   db:
@@ -13,7 +13,7 @@ services:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
       # 127.0.0.1 (TCP) so the check does not pass on the temporary init-time server
-      test: ['CMD-SHELL', 'pg_isready -U postgres -h 127.0.0.1 -d blizu']
+      test: ['CMD-SHELL', 'pg_isready -U postgres -h 127.0.0.1 -d nabavaradar']
       interval: 3s
       timeout: 3s
       retries: 30

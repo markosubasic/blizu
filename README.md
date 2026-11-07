@@ -56,6 +56,8 @@ uv run --package blizu-api uvicorn blizu_api.main:app --port 8010
 BLIZU_API_URL=http://127.0.0.1:8010 pnpm --filter blizu-web dev   # http://127.0.0.1:5173
 ```
 
+Baza je ista kao u zajedničkom repozitoriju [istipic/datathon-2026](https://github.com/istipic/datathon-2026): Docker projekt se i dalje zove `datathon-2026` i stvara baze `blizu`, `otporno` i `nabavaradar`, pa podaci koje ste već učitali ondje rade i ovdje, bez ponovnog učitavanja. Stare naredbe (`make migrate APP=...`, `make ingest APP=... STEP=...`) rade jednako.
+
 Testovi: `make test` (pytest bez mrežnih poziva + vitest). Produkcija: `docker-compose.prod.yml` + Caddy, vidi
 dokumentaciju aplikacije.
 
